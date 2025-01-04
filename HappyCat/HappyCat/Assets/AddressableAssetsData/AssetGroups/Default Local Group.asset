@@ -14,7 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: f50fdc6510cb6fc4fa00a1f7e2588bee
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 0eff0026cbd41174dabb6cc64b0023f2
+    m_Address: Assets/HC_Resources/Cat/241229_cat_001_ani100.psd
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b9fd349342542a4f8d414024aa626fa
+    m_Address: Assets/HC_Resources/Atlas/UI.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c058d80b37e328a45a7679147cc2c5f7
+    m_Address: Assets/HC_Resources/Cat/241229_cat_002_ani100.psd
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ca285e42ff0ced54c9f16bf6b63b503a, type: 2}
   m_SchemaSet:
