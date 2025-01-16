@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c03746c80371334e8e901c179de4361
+    m_Address: "Assets/HC_Resources/BackGround/\uBC30\uACBD_\uB0A9\uD488.psd"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b9fd349342542a4f8d414024aa626fa
     m_Address: Assets/HC_Resources/Atlas/UI.spriteatlasv2
     m_ReadOnly: 0
