@@ -26,7 +26,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b9fd349342542a4f8d414024aa626fa
-    m_Address: Assets/HC_Resources/Atlas/UI.spriteatlasv2
+    m_Address: Assets/HC_Resources/Art/Atlas/UI.spriteatlasv2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
