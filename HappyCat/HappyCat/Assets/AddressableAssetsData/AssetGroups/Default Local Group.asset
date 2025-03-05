@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: f50fdc6510cb6fc4fa00a1f7e2588bee
   m_SerializeEntries:
+  - m_GUID: 5bcb03b254eb1944f8312c700b27e92d
+    m_Address: Assets/HC_Resources/Art/Atlas/Loading.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76e7beab633ad4a469b507df5c521845
+    m_Address: Assets/HC_Resources/Art/Atlas/Cat.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b9fd349342542a4f8d414024aa626fa
     m_Address: Assets/HC_Resources/Art/Atlas/UI.spriteatlasv2
     m_ReadOnly: 0
