@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: f50fdc6510cb6fc4fa00a1f7e2588bee
   m_SerializeEntries:
-  - m_GUID: 9b9fd349342542a4f8d414024aa626fa
-    m_Address: Assets/HC_Resources/Art/Atlas/UI.spriteatlasv2
+  - m_GUID: 83121eee653a97844a033be95bf0e167
+    m_Address: Assets/HC_Resources/Art/Atlas/UI1.spriteatlasv2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
