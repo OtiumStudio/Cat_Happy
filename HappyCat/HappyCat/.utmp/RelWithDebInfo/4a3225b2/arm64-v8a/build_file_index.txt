@@ -1,0 +1,2 @@
+C:\Git\Cat_Happy\HappyCat\HappyCat\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Git\Cat_Happy\HappyCat\HappyCat\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
