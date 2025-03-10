@@ -1,11 +1,18 @@
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace HC.Network
 {
     public class GoogleLogin
     {
+        TextMeshProUGUI text;
+        public void SetText(TextMeshProUGUI text)
+        {
+            this.text = text;
+        }
         public void Init()
         {
             PlayGamesPlatform.DebugLogEnabled = true;
@@ -27,10 +34,12 @@ namespace HC.Network
                 Debug.Log(name);
                 Debug.Log(id);
                 Debug.Log(imgUrl);
+                text.text = $"{name}, {id}, {imgUrl}";
             }
             else
             {
                 Debug.Log("Sign in Failed!");
+                text.text = $"{status.ToString()}";
             }
         }
     }

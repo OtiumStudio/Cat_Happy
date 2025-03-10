@@ -4,6 +4,7 @@ using GooglePlayGames.BasicApi;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace HC.Network
 {
@@ -19,12 +20,18 @@ namespace HC.Network
             googleLogin.Init();
             iosLogin.Init();
         }
+
+        public static void SetText(TextMeshProUGUI text)
+        {
+            googleLogin.SetText(text);
+        }
         public static void SetGoogleButton(Button googleLoginButton)
         {
             if (googleLogin == null) return;
 
             googleLoginButton?.onClick.AddListener(googleLogin.SignIn);
         }
+
         public static void SetIosButton(Button iosLoginButton)
         {
             iosLoginButton?.onClick.AddListener(iosLogin.SignIn);
