@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/제목 없음.png.meta
-guid: 8b417e2bc20dba946bcd09da695a6912
-========
-guid: 6d30de0776ae0644ba3f98e77f0d3bbf
->>>>>>>> 678d3d23d9f0b22788d04a8661ea923957cb296c:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/Illustrated Guide/box01.png.meta
+guid: 932c3deaac4a7cc44b489b98da609a58
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -41,39 +37,24 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-<<<<<<<< HEAD:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/제목 없음.png.meta
     wrapU: 1
     wrapV: 1
-========
-    wrapU: 0
-    wrapV: 0
->>>>>>>> 678d3d23d9f0b22788d04a8661ea923957cb296c:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/Illustrated Guide/box01.png.meta
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/제목 없음.png.meta
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
-========
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 1
-  alphaIsTransparency: 0
-  spriteTessellationDetail: -1
-  textureType: 0
->>>>>>>> 678d3d23d9f0b22788d04a8661ea923957cb296c:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/Illustrated Guide/box01.png.meta
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -82,9 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -104,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,12 +95,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-<<<<<<<< HEAD:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/제목 없음.png.meta
-========
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,11 +108,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
->>>>>>>> 678d3d23d9f0b22788d04a8661ea923957cb296c:HappyCat/HappyCat/Assets/HC_Resources/Art/UI/Illustrated Guide/box01.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,7 +126,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

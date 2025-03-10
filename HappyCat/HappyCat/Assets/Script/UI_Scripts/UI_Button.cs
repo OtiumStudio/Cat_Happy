@@ -1,14 +1,20 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UI_Button : MonoBehaviour
 {
-    enum Buttons // type string[]
+    public GameObject popup;
+    private void Awake()
     {
-        Popup,
-        Linked,
+        popup.SetActive(false);
     }
 
+    public void Open()
+    {
+        popup.SetActive(true);
+
+    }
+    public void Close()
+    {
+        popup.SetActive(false);
+    }
 }

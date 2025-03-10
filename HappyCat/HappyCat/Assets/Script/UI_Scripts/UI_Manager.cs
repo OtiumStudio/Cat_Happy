@@ -1,40 +1,46 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
 
-public class UI_Manager : MonoBehaviour
+public class UI : MonoBehaviour
 {
-    public static UI_Manager Instance;
+    UI_Button Popup_UI;
+    Fadein_out FadeCTR;
+
+    [SerializeField]
+    public GameObject popup_ui;
+    public GameObject dropdown_panal; // 불투명도를 조절할 Panel 오브젝트
 
     private void Awake()
     {
-        if (Instance == null)
+
+        Popup_UI = GetComponent<UI_Button>();
+        FadeCTR = GetComponent<Fadein_out>();
+
+    }
+
+
+
+    public void dropDown()
+    {
+        if (dropdown_panal.activeSelf == true)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            FadeCTR.FadeOut();
         }
         else
-            Destroy(gameObject);
+        {
+            FadeCTR.FadeIn();
+        }
     }
-
-    public void ShowPopupUI()
-    {
-        // To Do - 팝업 UI 열기        
-    }
-
-    public void ClosePopupUI()
-    {
-        // To Do - 팝업 UI 닫기
-    }
-
-    public void ShowLinkedUI()
-    {
-        // To Do - 연속 UI 띄워주기, 마지막 UI Active(false)
-    }
-
-    public void UndoLinkedUI()
-    {
-        // To Do - 연속 UI 뒤로가기
-    }
+    public void alert()
+    { }
+    public void calender()
+    { }
+    public void colection_book()
+    { Popup_UI.Open(); }
+    public void star()
+    { }
+    public void mail()
+    { }
 }
-
