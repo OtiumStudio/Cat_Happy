@@ -1,1 +1,96 @@
-{"jsonObject":{"Furuniture":{"code : int":["20001","20002","20003","20004","20005","20006"],"name_id : int":["10020001","10020002","10020003","10020004","10020005","10020006"],"desc_id : int":["20020001","20020002","20020003","20020004","20020005","20020006"],"icon : string":["food001","food002","food003","food004","food005","food006"],"type : int":["500","500","500","500","500","500"],"theme : int":["1","1","1","1","1","1"],"place : int":["1","1","1","1","1","1"],"spot : int":["0","0","0","0","0","0"],"recipe : int":["0","0","0","0","0","0"],"skill01 : int":["0","0","0","0","0","0"],"skill02 : int":["0","0","0","0","0","0"],"skill03 : int":["0","0","0","0","0","0"]}},"spreadSheetName":"FurunitureTable","spreadSheetID":"1PnmY3iQ9LdpLuTx_Tuajzdi1XsCUD0Z2IJfI6QMuIe8","sheetIDList":["0"],"tableTypes":[0],"instruction":1,"error":null}
+{
+    "jsonObject": {
+        "Data": {
+            "code : int": [
+                "20001",
+                "20002",
+                "20003",
+                "20004",
+                "20005",
+                "20006"
+            ],
+            "name_id : int": [
+                "10020001",
+                "10020002",
+                "10020003",
+                "10020004",
+                "10020005",
+                "10020006"
+            ],
+            "desc_id : int": [
+                "20020001",
+                "20020002",
+                "20020003",
+                "20020004",
+                "20020005",
+                "20020006"
+            ],
+            "icon : string": [
+                "food001",
+                "food002",
+                "food003",
+                "food004",
+                "food005",
+                "food006"
+            ],
+            "type : int": [
+                "500",
+                "500",
+                "500",
+                "500",
+                "500",
+                "500"
+            ],
+            "theme : int": [
+                "1",
+                "1",
+                "1",
+                "1",
+                "1",
+                "1"
+            ],
+            "place : Enum<Place>": [
+                "Restaurant",
+                "Kitchen",
+                "Kitchen",
+                "Terrace",
+                "Terrace",
+                "Terrace"
+            ],
+            "spot : int": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+            ],
+            "recipe : int": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+            ],
+            "skill : List<int>": [
+                "[0, 0]",
+                "[0, 0]",
+                "[0, 0]",
+                "[0, 0]",
+                "[0, 0]",
+                "[0, 0]"
+            ]
+        }
+    },
+    "spreadSheetName": "FurunitureTable",
+    "spreadSheetID": "1AwzCMB3PgVb8Vtjl2lAu_i89a3ELkiVEVz3jWZBLfMw",
+    "sheetIDList": [
+        "0"
+    ],
+    "tableTypes": [
+        0
+    ],
+    "instruction": 1,
+    "error": null
+}

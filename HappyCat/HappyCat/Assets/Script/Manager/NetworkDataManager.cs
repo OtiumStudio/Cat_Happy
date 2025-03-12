@@ -12,6 +12,8 @@ namespace HC.Network
     {
         private static GoogleLogin googleLogin;
         private static IosLogin iosLogin;
+
+        public static GoogleLogin GoogleLogin { get => googleLogin; set => googleLogin = value; }
         public static void Init()
         {
             if (googleLogin == null) googleLogin = new GoogleLogin();
@@ -21,10 +23,6 @@ namespace HC.Network
             iosLogin.Init();
         }
 
-        public static void SetText(TextMeshProUGUI text)
-        {
-            googleLogin.SetText(text);
-        }
         public static void SetGoogleButton(Button googleLoginButton)
         {
             if (googleLogin == null) return;

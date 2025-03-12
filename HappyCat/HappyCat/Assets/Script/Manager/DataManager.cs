@@ -10,8 +10,9 @@ namespace HC.Data
     public class DataManager
     {
         private static LocalSaveData saveData;
-
+        private static ServerData serverData;
         public static LocalSaveData SaveData { get => saveData; }
+        public static ServerData ServerData { get => serverData; }
 
         public static void Init()
         {
@@ -22,6 +23,11 @@ namespace HC.Data
         {
             saveData = new LocalSaveData(LocalDataSave);
             LocalDataSave();
+        }
+        private static void SetServerData()
+        {
+            serverData = new ServerData();
+            ServerDataLoad();
         }
 
         private static void LocalDataSave()
@@ -41,7 +47,7 @@ namespace HC.Data
                 HC_Debug.Log(e.Message);
             }
         }
-        public static void LocalDataLoad()
+        private static void LocalDataLoad()
         {
             if(File.Exists(Application.persistentDataPath + "/LocalData.dat") == false)
             {
@@ -64,6 +70,11 @@ namespace HC.Data
                 HC_Debug.Log(e.Message);
                 return;
             }
+        }
+
+        private static void ServerDataLoad()
+        {
+
         }
     }
 }
