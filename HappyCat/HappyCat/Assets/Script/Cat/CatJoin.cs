@@ -1,0 +1,60 @@
+using HC.Resource;
+using HC.Utils;
+using System;
+using System.Threading.Tasks;
+using UnityEngine;
+
+namespace HC.Game
+{
+    public class CatJoin
+    {
+        readonly float coolTimeMin = 10;
+        readonly float coolTimeMax = 20;
+        float coolTimeSec = 0;
+        public void Init()
+        {
+
+        }
+        public void Update()
+        {
+            coolTimeSec -= Time.deltaTime;
+
+            //Debug.Log(coolTimeSec);
+            if(coolTimeSec <= 0)
+            {
+                JoinCat();
+            }
+        }
+
+        public void Load()
+        {
+            //waitTime
+            float waitTimeHour = 10;
+            int count = Mathf.CeilToInt(waitTimeHour / 2);
+
+            Task.Run(async () => {
+                for(int i = 0; i < count; i++)
+                {
+                    await Task.Delay(TimeSpan.FromMilliseconds(500));
+                }
+            });
+        }
+
+        public async void JoinCat(int catCode = -1)
+        {
+            Debug.Log("JoinCat");
+            // CreateCat
+            if(catCode == -1)
+                catCode = UserUtill.GetCat().code;
+
+            var cat = await ResourcesManager.Create_Cat<Cat_Actor>(catCode);
+
+            coolTimeSec = UnityEngine.Random.Range(coolTimeMin, coolTimeMax);
+        }
+        public void Ads()
+        {
+
+        }
+    }
+}
+

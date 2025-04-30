@@ -11,12 +11,33 @@ namespace HC.Data
     {
         private static LocalSaveData saveData;
         private static ServerData serverData;
-        public static LocalSaveData SaveData { get => saveData; }
-        public static ServerData ServerData { get => serverData; }
+        public static LocalSaveData SaveData
+        {
+            get
+            {
+                if (saveData == null)
+                {
+                    SetSaveData();
+                }
+                return saveData;
+            }
+        }
+        public static ServerData ServerData
+        {
+            get
+            {
+                if (serverData == null)
+                {
+                    SetServerData();
+                }
+                return serverData;
+            }
+        }
 
         public static void Init()
         {
             LocalDataLoad();
+            SetServerData();
         }
 
         private static void SetSaveData()
@@ -74,7 +95,17 @@ namespace HC.Data
 
         private static void ServerDataLoad()
         {
+            TempServerDataLoad();
+        }
 
+        private static void TempServerDataLoad()
+        {
+            UserData userData = new UserData();
+            userData.level = 1;
+            userData.cash = 0;
+            userData.coin = 0;
+            userData.guideQuest_Progression = 0;
+            serverData.userData = userData;
         }
     }
 }

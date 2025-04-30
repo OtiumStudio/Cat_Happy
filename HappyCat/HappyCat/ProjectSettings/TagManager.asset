@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,6 +41,30 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: test
+    uniqueID: 3853385901
+    locked: 0
+  - name: sky
+    uniqueID: 1205089745
+    locked: 0
+  - name: floor
+    uniqueID: 1013075333
+    locked: 0
+  - name: wall
+    uniqueID: 702026725
+    locked: 0
+  - name: cat
+    uniqueID: 3056941505
+    locked: 0
+  - name: furniture
+    uniqueID: 1344884573
+    locked: 0
+  - name: tilemap
+    uniqueID: 2467651203
+    locked: 0
+  - name: Cover
+    uniqueID: 1151371163
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
@@ -50,27 +74,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 

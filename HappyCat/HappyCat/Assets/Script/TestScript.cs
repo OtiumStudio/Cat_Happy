@@ -16,9 +16,9 @@ public class TestScript : MonoBehaviour
     }
     void Start()
     {
-        agent.speed += 0.1f;
+        agent.speed += 1000f;
 
-        agent.SetDestination(new Vector3(-0.77f, 11.58f));
+        agent.SetDestination(new Vector3(30f, 276));
         //UGSManager.Init();
 
         //foreach(var a in GuestTable.Guest.GuestList)
