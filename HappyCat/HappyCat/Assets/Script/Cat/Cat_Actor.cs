@@ -34,7 +34,7 @@ public class Cat_Actor : MonoBehaviour
         //var catTableData = GuestTable.Data.DataMap[101];
         var data = UGSManager.GetData<GuestTable.Data>(catCode);
 
-        animator.runtimeAnimatorController = await ResourcesManager.Create_AnimController<RuntimeAnimatorController>(data.icon);
+        animator.runtimeAnimatorController = await LoadAddressableManager.Load_AnimController<RuntimeAnimatorController>(data.icon);
     }
     void Start()
     {

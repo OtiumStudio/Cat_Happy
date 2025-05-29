@@ -47,7 +47,7 @@ namespace HC.Game
             if(catCode == -1)
                 catCode = UserUtill.GetCat().code;
 
-            var cat = await ResourcesManager.Create_Cat<Cat_Actor>(catCode);
+            var cat = await LoadAddressableManager.Create_Cat<Cat_Actor>(catCode);
 
             coolTimeSec = UnityEngine.Random.Range(coolTimeMin, coolTimeMax);
         }

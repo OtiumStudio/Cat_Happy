@@ -45,6 +45,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9994912efaf9dd54cb6e32298ef5989e
+    m_Address: Assets/HC_Resources/Art/Atlas/BG.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a6e3d13f2972baa4b88693528e54f9ee
     m_Address: Assets/HC_Resources/Art/Cat/Animator/AC_cat004.controller
     m_ReadOnly: 0
