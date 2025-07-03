@@ -18,6 +18,11 @@ public class LoginPage : MonoBehaviour
     private Image progressBar;
     private float progress = 0;
     private bool loadComplete = false;
+
+    private void Awake()
+    {
+        UIManager.Init();
+    }
     void Start()
     {
         //Screen.orientation = ScreenOrientation.Portrait;
@@ -25,6 +30,8 @@ public class LoginPage : MonoBehaviour
         GoogleLogin();
 
         Config.SetCamera(E_Camera.loadingPage);
+
+        UIManager.ShowUI("OneButtonPopup");
     }
     void Bind()
     {
