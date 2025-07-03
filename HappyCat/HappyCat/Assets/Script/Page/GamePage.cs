@@ -15,6 +15,7 @@ public class GamePage : MonoBehaviour
 {
     private void Awake()
     {
+        UIManager.Init();
         CatManager.CatInit();
         FurnitureManager.FurnitureInit();
     }

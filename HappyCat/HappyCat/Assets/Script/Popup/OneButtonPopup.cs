@@ -3,7 +3,7 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OneButtonPopup : MonoBehaviour
+public class OneButtonPopup : UIBase
 {
     [SerializeField]
     private Button block;
@@ -15,15 +15,18 @@ public class OneButtonPopup : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        block.onClick.AddListener(OnClose);
-        checkButton.onClick.AddListener(OnClose);
+        block.onClick.AddListener(OnConfirm);
+        checkButton.onClick.AddListener(OnConfirm);
     }
 
     public void SetText(string _text)
     {
         text.text = _text;
     }
-
+    void OnConfirm()
+    {
+        Destroy(gameObject);
+    }
     void OnClose()
     {
         Destroy(gameObject);
