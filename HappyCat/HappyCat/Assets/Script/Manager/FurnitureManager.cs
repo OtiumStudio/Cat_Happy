@@ -11,6 +11,7 @@ namespace HC.Game
         static SpriteRenderer floor;
         static SpriteRenderer sky;
         static SpriteRenderer wall;
+        static SpriteRenderer wall_Partition;
 
         //restaurant
         static SpriteRenderer board;
@@ -58,6 +59,7 @@ namespace HC.Game
             floor = BG.Find("floor").GetComponent<SpriteRenderer>();
             sky = BG.Find("sky").GetComponent<SpriteRenderer>();
             wall = BG.Find("wall").GetComponent<SpriteRenderer>();
+            wall_Partition = BG.Find("wall_b").GetComponent<SpriteRenderer>();
 
             Transform restaurnat = BG.Find("BG_Restaurant");
 
@@ -136,7 +138,8 @@ namespace HC.Game
     {
         public string floor = "basica_floor_001";
         public string sky = "basica_sky_001";
-        public string wall = "basica_wall_001";
+        public string wall = "basica_walla_001";
+        public string wall_b = "basica_wallb_001";
         public string board = "basica_board_001";
         public string table1 = "basica_table_001";
         public string table2 = "basicb_table_002";
