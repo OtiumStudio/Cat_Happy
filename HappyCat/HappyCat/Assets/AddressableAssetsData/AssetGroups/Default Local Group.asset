@@ -30,8 +30,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f06f7de39cbcd2428a1e07d970949a3
+    m_Address: Assets/HC_Resources/Prefabs/Popup/ProfilePopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 51172bba5edc9af45924ca87022e36fc
     m_Address: Assets/HC_Resources/Art/Cat/Animator/AC_cat002.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54c6f2eecd2cb3640a640ab5aae33db2
+    m_Address: Assets/HC_Resources/Prefabs/UI/TopLayout.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -40,8 +50,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6407581a5b7cf6b48a53f17fbb2462c6
+    m_Address: Assets/HC_Resources/Prefabs/UI/MomoButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76ac61b92d62e7447ab553ffa4fdb857
+    m_Address: Assets/HC_Resources/Prefabs/UI/ProfileItem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 76e7beab633ad4a469b507df5c521845
     m_Address: Assets/HC_Resources/Art/Atlas/Cat.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 808719068f201df4c9dd73f85bc38d48
+    m_Address: Assets/HC_Resources/Prefabs/UI/PromoteButton.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

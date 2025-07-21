@@ -13,11 +13,14 @@ using UnityEngine.UI;
 
 public class GamePage : MonoBehaviour
 {
+    [SerializeField] GameObject topLayer;
     private void Awake()
     {
         UIManager.Init();
         CatManager.CatInit();
         FurnitureManager.FurnitureInit();
+
+        UIManager.RegisterUI("TopLayout", topLayer).Forget();
     }
     void Start()
     {
