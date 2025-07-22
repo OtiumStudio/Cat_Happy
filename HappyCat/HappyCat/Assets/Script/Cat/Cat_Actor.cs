@@ -1,5 +1,8 @@
 using HC.Data;
+using HC.Event;
 using HC.Resource;
+using HC.Utils;
+using NUnit.Framework.Constraints;
 using UGS;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,6 +19,7 @@ public class Cat_Actor : MonoBehaviour
 
     private void Awake()
     {
+        gameObject.SetActive(false);
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -34,7 +38,13 @@ public class Cat_Actor : MonoBehaviour
         //var catTableData = GuestTable.Data.DataMap[101];
         var data = UGSManager.GetData<GuestTable.Data>(catCode);
 
+
+        agent.enabled = false;
+        transform.position = CatPathManager.GetStartPosition();
+        agent.enabled = true;
+        gameObject.SetActive(true);
         animator.runtimeAnimatorController = await LoadAddressableManager.Load_AnimController<RuntimeAnimatorController>(data.icon);
+        GameEvent.ServiceEvents.Emit(new JoinCatEvent(this));
     }
     void Start()
     {
@@ -57,7 +67,7 @@ public class Cat_Actor : MonoBehaviour
         //}
     }
 
-    void SetDestination(Vector3 target)
+    public void SetDestination(Vector3 target)
     {
         var driftPos = target;
         if (Mathf.Abs(transform.position.x - target.x) < agentDrift)

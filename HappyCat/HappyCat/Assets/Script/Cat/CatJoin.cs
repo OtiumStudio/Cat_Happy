@@ -22,6 +22,7 @@ namespace HC.Game
             //Debug.Log(coolTimeSec);
             if(coolTimeSec <= 0)
             {
+                coolTimeSec = UnityEngine.Random.Range(coolTimeMin, coolTimeMax);
                 JoinCat();
             }
         }
@@ -48,8 +49,6 @@ namespace HC.Game
                 catCode = UserUtill.GetCat().code;
 
             var cat = await LoadAddressableManager.Create_Cat<Cat_Actor>(catCode);
-
-            coolTimeSec = UnityEngine.Random.Range(coolTimeMin, coolTimeMax);
         }
         public void Ads()
         {

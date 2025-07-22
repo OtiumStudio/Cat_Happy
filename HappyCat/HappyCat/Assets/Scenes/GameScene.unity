@@ -9169,6 +9169,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &777163588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 713853541842483843, guid: 54c6f2eecd2cb3640a640ab5aae33db2, type: 3}
+  m_PrefabInstance: {fileID: 5843526871133806589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &777332129
 GameObject:
   m_ObjectHideFlags: 0
@@ -12620,6 +12625,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7970644391272996190, guid: 54c6f2eecd2cb3640a640ab5aae33db2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.2749023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264973133957167522, guid: 54c6f2eecd2cb3640a640ab5aae33db2, type: 3}
+      propertyPath: morePanel
+      value: 
+      objectReference: {fileID: 777163588}
     - target: {fileID: 8626461862412747593, guid: 54c6f2eecd2cb3640a640ab5aae33db2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12639,6 +12652,10 @@ PrefabInstance:
     - target: {fileID: 8626461862412747593, guid: 54c6f2eecd2cb3640a640ab5aae33db2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807682419638819293, guid: 54c6f2eecd2cb3640a640ab5aae33db2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -73.8999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

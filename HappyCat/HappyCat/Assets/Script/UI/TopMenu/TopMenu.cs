@@ -10,6 +10,7 @@ public class TopMenu : UIBase
     [SerializeField] HCButton shopButton;
     [SerializeField] HCButton dropboxButton;
 
+    [SerializeField] GameObject morePanel;
     [SerializeField] HCButton settingsButton;
     [SerializeField] HCButton calenderButton;
     [SerializeField] HCButton colection_bookButton;
@@ -61,7 +62,9 @@ public class TopMenu : UIBase
     void OnCoin() { }
     void OnCash() { }
     void OnShop() { }
-    void OnDropBox() { }
+    void OnDropBox() {
+        morePanel.SetActive(!morePanel.activeSelf);
+    }
     void OnSettings() { }
     void OnCalender() { }
     void OnColectBook() { }
