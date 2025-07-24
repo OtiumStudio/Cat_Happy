@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jayce/otium-server
+CMAKE_SOURCE_DIR = /Users/jayce/OtiumProject/Cat_Happy/otium-server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jayce/otium-server/build
+CMAKE_BINARY_DIR = /Users/jayce/OtiumProject/Cat_Happy/otium-server/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server.dir/depend.make
@@ -73,88 +73,88 @@ CMakeFiles/server.dir/codegen:
 .PHONY : CMakeFiles/server.dir/codegen
 
 CMakeFiles/server.dir/src/main.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/main.cpp.o: /Users/jayce/otium-server/src/main.cpp
+CMakeFiles/server.dir/src/main.cpp.o: /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/main.cpp
 CMakeFiles/server.dir/src/main.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/main.cpp.o -MF CMakeFiles/server.dir/src/main.cpp.o.d -o CMakeFiles/server.dir/src/main.cpp.o -c /Users/jayce/otium-server/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/main.cpp.o -MF CMakeFiles/server.dir/src/main.cpp.o.d -o CMakeFiles/server.dir/src/main.cpp.o -c /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/main.cpp
 
 CMakeFiles/server.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/otium-server/src/main.cpp > CMakeFiles/server.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/main.cpp > CMakeFiles/server.dir/src/main.cpp.i
 
 CMakeFiles/server.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/otium-server/src/main.cpp -o CMakeFiles/server.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/main.cpp -o CMakeFiles/server.dir/src/main.cpp.s
 
 CMakeFiles/server.dir/src/login_handler.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/login_handler.cpp.o: /Users/jayce/otium-server/src/login_handler.cpp
+CMakeFiles/server.dir/src/login_handler.cpp.o: /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/login_handler.cpp
 CMakeFiles/server.dir/src/login_handler.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/src/login_handler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/login_handler.cpp.o -MF CMakeFiles/server.dir/src/login_handler.cpp.o.d -o CMakeFiles/server.dir/src/login_handler.cpp.o -c /Users/jayce/otium-server/src/login_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/src/login_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/login_handler.cpp.o -MF CMakeFiles/server.dir/src/login_handler.cpp.o.d -o CMakeFiles/server.dir/src/login_handler.cpp.o -c /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/login_handler.cpp
 
 CMakeFiles/server.dir/src/login_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/login_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/otium-server/src/login_handler.cpp > CMakeFiles/server.dir/src/login_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/login_handler.cpp > CMakeFiles/server.dir/src/login_handler.cpp.i
 
 CMakeFiles/server.dir/src/login_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/login_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/otium-server/src/login_handler.cpp -o CMakeFiles/server.dir/src/login_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/login_handler.cpp -o CMakeFiles/server.dir/src/login_handler.cpp.s
 
 CMakeFiles/server.dir/src/register.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/register.cpp.o: /Users/jayce/otium-server/src/register.cpp
+CMakeFiles/server.dir/src/register.cpp.o: /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/register.cpp
 CMakeFiles/server.dir/src/register.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/src/register.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/register.cpp.o -MF CMakeFiles/server.dir/src/register.cpp.o.d -o CMakeFiles/server.dir/src/register.cpp.o -c /Users/jayce/otium-server/src/register.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/src/register.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/register.cpp.o -MF CMakeFiles/server.dir/src/register.cpp.o.d -o CMakeFiles/server.dir/src/register.cpp.o -c /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/register.cpp
 
 CMakeFiles/server.dir/src/register.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/register.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/otium-server/src/register.cpp > CMakeFiles/server.dir/src/register.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/register.cpp > CMakeFiles/server.dir/src/register.cpp.i
 
 CMakeFiles/server.dir/src/register.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/register.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/otium-server/src/register.cpp -o CMakeFiles/server.dir/src/register.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/register.cpp -o CMakeFiles/server.dir/src/register.cpp.s
 
 CMakeFiles/server.dir/src/user_db.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/user_db.cpp.o: /Users/jayce/otium-server/src/user_db.cpp
+CMakeFiles/server.dir/src/user_db.cpp.o: /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/user_db.cpp
 CMakeFiles/server.dir/src/user_db.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/src/user_db.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/user_db.cpp.o -MF CMakeFiles/server.dir/src/user_db.cpp.o.d -o CMakeFiles/server.dir/src/user_db.cpp.o -c /Users/jayce/otium-server/src/user_db.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/src/user_db.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/user_db.cpp.o -MF CMakeFiles/server.dir/src/user_db.cpp.o.d -o CMakeFiles/server.dir/src/user_db.cpp.o -c /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/user_db.cpp
 
 CMakeFiles/server.dir/src/user_db.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/user_db.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/otium-server/src/user_db.cpp > CMakeFiles/server.dir/src/user_db.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/user_db.cpp > CMakeFiles/server.dir/src/user_db.cpp.i
 
 CMakeFiles/server.dir/src/user_db.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/user_db.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/otium-server/src/user_db.cpp -o CMakeFiles/server.dir/src/user_db.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/user_db.cpp -o CMakeFiles/server.dir/src/user_db.cpp.s
 
 CMakeFiles/server.dir/src/users_handler.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/users_handler.cpp.o: /Users/jayce/otium-server/src/users_handler.cpp
+CMakeFiles/server.dir/src/users_handler.cpp.o: /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/users_handler.cpp
 CMakeFiles/server.dir/src/users_handler.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/src/users_handler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/users_handler.cpp.o -MF CMakeFiles/server.dir/src/users_handler.cpp.o.d -o CMakeFiles/server.dir/src/users_handler.cpp.o -c /Users/jayce/otium-server/src/users_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/src/users_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/users_handler.cpp.o -MF CMakeFiles/server.dir/src/users_handler.cpp.o.d -o CMakeFiles/server.dir/src/users_handler.cpp.o -c /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/users_handler.cpp
 
 CMakeFiles/server.dir/src/users_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/users_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/otium-server/src/users_handler.cpp > CMakeFiles/server.dir/src/users_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/users_handler.cpp > CMakeFiles/server.dir/src/users_handler.cpp.i
 
 CMakeFiles/server.dir/src/users_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/users_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/otium-server/src/users_handler.cpp -o CMakeFiles/server.dir/src/users_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/users_handler.cpp -o CMakeFiles/server.dir/src/users_handler.cpp.s
 
 CMakeFiles/server.dir/src/db_test.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/db_test.cpp.o: /Users/jayce/otium-server/src/db_test.cpp
+CMakeFiles/server.dir/src/db_test.cpp.o: /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/db_test.cpp
 CMakeFiles/server.dir/src/db_test.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server.dir/src/db_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/db_test.cpp.o -MF CMakeFiles/server.dir/src/db_test.cpp.o.d -o CMakeFiles/server.dir/src/db_test.cpp.o -c /Users/jayce/otium-server/src/db_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server.dir/src/db_test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/db_test.cpp.o -MF CMakeFiles/server.dir/src/db_test.cpp.o.d -o CMakeFiles/server.dir/src/db_test.cpp.o -c /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/db_test.cpp
 
 CMakeFiles/server.dir/src/db_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/db_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/otium-server/src/db_test.cpp > CMakeFiles/server.dir/src/db_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/db_test.cpp > CMakeFiles/server.dir/src/db_test.cpp.i
 
 CMakeFiles/server.dir/src/db_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/db_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/otium-server/src/db_test.cpp -o CMakeFiles/server.dir/src/db_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/db_test.cpp -o CMakeFiles/server.dir/src/db_test.cpp.s
 
 # Object files for target server
 server_OBJECTS = \
@@ -176,7 +176,7 @@ server: CMakeFiles/server.dir/src/users_handler.cpp.o
 server: CMakeFiles/server.dir/src/db_test.cpp.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jayce/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -188,6 +188,6 @@ CMakeFiles/server.dir/clean:
 .PHONY : CMakeFiles/server.dir/clean
 
 CMakeFiles/server.dir/depend:
-	cd /Users/jayce/otium-server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jayce/otium-server /Users/jayce/otium-server /Users/jayce/otium-server/build /Users/jayce/otium-server/build /Users/jayce/otium-server/build/CMakeFiles/server.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/jayce/OtiumProject/Cat_Happy/otium-server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jayce/OtiumProject/Cat_Happy/otium-server /Users/jayce/OtiumProject/Cat_Happy/otium-server /Users/jayce/OtiumProject/Cat_Happy/otium-server/build /Users/jayce/OtiumProject/Cat_Happy/otium-server/build /Users/jayce/OtiumProject/Cat_Happy/otium-server/build/CMakeFiles/server.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/server.dir/depend
 

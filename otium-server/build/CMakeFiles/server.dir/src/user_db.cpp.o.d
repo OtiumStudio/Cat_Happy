@@ -1,6 +1,6 @@
 CMakeFiles/server.dir/src/user_db.cpp.o: \
-  /Users/jayce/otium-server/src/user_db.cpp \
-  /Users/jayce/otium-server/src/../include/user_db.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/user_db.cpp \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/../include/user_db.h \
   /opt/homebrew/include/mysql/mysql.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \

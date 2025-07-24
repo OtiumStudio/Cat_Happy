@@ -1,6 +1,6 @@
 CMakeFiles/server.dir/src/register.cpp.o: \
-  /Users/jayce/otium-server/src/register.cpp \
-  /Users/jayce/otium-server/src/../include/register.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/register.cpp \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/../include/register.h \
   /opt/homebrew/include/mysql/mysql.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
@@ -148,8 +148,8 @@ CMakeFiles/server.dir/src/register.cpp.o: \
   /opt/homebrew/include/mysql/mysql_version.h \
   /opt/homebrew/include/mysql/mysql_time.h \
   /opt/homebrew/include/mysql/errmsg.h \
-  /Users/jayce/otium-server/crow/include/crow.h \
-  /Users/jayce/otium-server/crow/include/crow/query_string.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/query_string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
@@ -973,12 +973,12 @@ CMakeFiles/server.dir/src/register.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Users/jayce/otium-server/crow/include/crow/http_parser_merged.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/http_parser_merged.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
-  /Users/jayce/otium-server/crow/include/crow/common.h \
-  /Users/jayce/otium-server/crow/include/crow/utility.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/common.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/utility.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/random \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
@@ -1028,7 +1028,7 @@ CMakeFiles/server.dir/src/register.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/seed_seq.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
-  /Users/jayce/otium-server/crow/include/crow/settings.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/settings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
@@ -1048,9 +1048,9 @@ CMakeFiles/server.dir/src/register.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Users/jayce/otium-server/crow/include/crow/ci_map.h \
-  /Users/jayce/otium-server/crow/include/crow/TinySHA1.hpp \
-  /Users/jayce/otium-server/crow/include/crow/socket_adaptors.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/ci_map.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/TinySHA1.hpp \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/socket_adaptors.h \
   /opt/homebrew/include/asio.hpp \
   /opt/homebrew/include/asio/any_completion_executor.hpp \
   /opt/homebrew/include/asio/detail/config.hpp \
@@ -1557,38 +1557,38 @@ CMakeFiles/server.dir/src/register.cpp.o: \
   /opt/homebrew/include/asio/writable_pipe.hpp \
   /opt/homebrew/include/asio/write_at.hpp \
   /opt/homebrew/include/asio/impl/write_at.hpp \
-  /Users/jayce/otium-server/crow/include/crow/json.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/json.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
-  /Users/jayce/otium-server/crow/include/crow/returnable.h \
-  /Users/jayce/otium-server/crow/include/crow/logging.h \
-  /Users/jayce/otium-server/crow/include/crow/mustache.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/returnable.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/logging.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/mustache.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
-  /Users/jayce/otium-server/crow/include/crow/task_timer.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/task_timer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
-  /Users/jayce/otium-server/crow/include/crow/http_request.h \
-  /Users/jayce/otium-server/crow/include/crow/websocket.h \
-  /Users/jayce/otium-server/crow/include/crow/parser.h \
-  /Users/jayce/otium-server/crow/include/crow/http_response.h \
-  /Users/jayce/otium-server/crow/include/crow/mime_types.h \
-  /Users/jayce/otium-server/crow/include/crow/multipart.h \
-  /Users/jayce/otium-server/crow/include/crow/exceptions.h \
-  /Users/jayce/otium-server/crow/include/crow/multipart_view.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/http_request.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/websocket.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/parser.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/http_response.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/mime_types.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/multipart.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/exceptions.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/multipart_view.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/charconv \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_integral.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_result.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars.h \
-  /Users/jayce/otium-server/crow/include/crow/routing.h \
-  /Users/jayce/otium-server/crow/include/crow/middleware.h \
-  /Users/jayce/otium-server/crow/include/crow/middleware_context.h \
-  /Users/jayce/otium-server/crow/include/crow/compression.h \
-  /Users/jayce/otium-server/crow/include/crow/http_connection.h \
-  /Users/jayce/otium-server/crow/include/crow/http_server.h \
-  /Users/jayce/otium-server/crow/include/crow/version.h \
-  /Users/jayce/otium-server/crow/include/crow/app.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/routing.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/middleware.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/middleware_context.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/compression.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/http_connection.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/http_server.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/version.h \
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include/crow/app.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_callback.h \
-  /Users/jayce/otium-server/src/../include/user_db.h
+  /Users/jayce/OtiumProject/Cat_Happy/otium-server/src/../include/user_db.h

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/jayce/otium-server/crow/include -I/opt/homebrew/include -I/Users/jayce/otium-server/third_party -I/opt/homebrew/include/mysql -I/opt/homebrew/opt/openssl/include
+CXX_INCLUDES = -I/Users/jayce/OtiumProject/Cat_Happy/otium-server/crow/include -I/opt/homebrew/include -I/Users/jayce/OtiumProject/Cat_Happy/otium-server/third_party -I/opt/homebrew/include/mysql -I/usr/include/mysql -I/opt/homebrew/opt/openssl/include
 
 CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
 
