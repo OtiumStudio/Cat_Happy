@@ -14,7 +14,12 @@ int main() {
         return 1;
     }
 
-    if (!mysql_real_connect(conn, "localhost", "otium_user", "dlshdtla0326!", "otium_db", 3306, nullptr, 0)) {
+    const char* host = getenv("DB_HOST");
+    const char* user = getenv("DB_USER");
+    const char* password = getenv("DB_PASS");
+    const char* dbname = getenv("DB_NAME");
+
+    if (!mysql_real_connect(conn, host, user, password, dbname, 3306, nullptr, 0)) {
         std::cerr << "MySQL connection failed: " << mysql_error(conn) << std::endl;
         return 1;
     }
