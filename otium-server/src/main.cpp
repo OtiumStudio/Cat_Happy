@@ -1,6 +1,6 @@
 #include "crow.h"
 #include <fstream>
-#include <mysql.h>
+#include <mysql/mysql.h>
 #include <sstream>
 #include "../include/register.h"
 #include "../include/login_handler.h"
