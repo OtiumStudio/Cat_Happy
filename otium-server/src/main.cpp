@@ -84,6 +84,10 @@ int main() {
     // openapi.yaml 제공
     CROW_ROUTE(app, "/openapi.yaml")([] {
         std::ifstream in("openapi.yaml");
+        if (!in) {
+        std::cerr << "[ERROR] openapi.yaml 파일 열기 실패!" << std::endl;
+        return crow::response(404);
+        }
         if (!in) return crow::response(404);
         std::ostringstream contents;
         contents << in.rdbuf();
