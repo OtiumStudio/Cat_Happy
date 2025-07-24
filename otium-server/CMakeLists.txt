@@ -13,6 +13,7 @@ include_directories(${CMAKE_SOURCE_DIR}/third_party)
 # MySQL C API
 include_directories(/opt/homebrew/include/mysql)
 link_directories(/opt/homebrew/lib)
+include_directories(/usr/include/mysql)
 
 # OpenSSL 경로 (M1/M2 Mac 기준, Intel Mac은 다를 수 있음)
 include_directories(/opt/homebrew/opt/openssl/include)
