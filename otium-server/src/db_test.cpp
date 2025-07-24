@@ -15,7 +15,7 @@ int main_test() {
     }
 
     // 연결: 호스트, 유저, 패스워드, DB명, 포트
-    if (!mysql_real_connect(conn, "localhost", "root", "dlshdtla0326!", "your_database", 3306, NULL, 0)) {
+    if (!mysql_real_connect(conn, "localhost", "otium_user", "dlshdtla0326!", "your_database", 3306, NULL, 0)) {
         std::cerr << "MySQL connection failed: " << mysql_error(conn) << "\n";
         return 1;
     }

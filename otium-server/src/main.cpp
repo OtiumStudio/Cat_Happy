@@ -14,7 +14,7 @@ int main() {
         return 1;
     }
 
-    if (!mysql_real_connect(conn, "localhost", "root", "dlshdtla0326!", "otium_db", 3306, nullptr, 0)) {
+    if (!mysql_real_connect(conn, "localhost", "otium_user", "dlshdtla0326!", "otium_db", 3306, nullptr, 0)) {
         std::cerr << "MySQL connection failed: " << mysql_error(conn) << std::endl;
         return 1;
     }
