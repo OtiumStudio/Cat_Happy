@@ -61,10 +61,11 @@ namespace FurunitureTable
 		public System.Int32 name_id;
 		public System.Int32 desc_id;
 		public System.String icon;
-		public System.Int32 type;
 		public System.Int32 theme;
 		public Place place;
+		public System.Int32 type;
 		public System.Int32 spot;
+		public System.Int32 no;
 		public System.Int32 recipe;
 		public System.Collections.Generic.List<Int32> skill;
   

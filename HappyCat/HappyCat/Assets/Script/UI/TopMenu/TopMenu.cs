@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using HC.Event;
 using HC.Utils;
 using UnityEngine;
 
@@ -61,7 +62,8 @@ public class TopMenu : UIBase
     }
     void OnCoin() { }
     void OnCash() { }
-    void OnShop() { }
+    void OnShop() {
+    }
     void OnDropBox() {
         morePanel.SetActive(!morePanel.activeSelf);
     }

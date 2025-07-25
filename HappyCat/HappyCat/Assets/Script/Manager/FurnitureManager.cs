@@ -1,172 +1,165 @@
+using HC.Data;
 using HC.Resource;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 namespace HC.Game
 {
     public class FurnitureManager
     {
         //bg
-        static SpriteRenderer floor;
-        static SpriteRenderer sky;
-        static SpriteRenderer wall;
-        static SpriteRenderer wall_Partition;
+        public static SpriteRenderer Floor { get; set; }
+        public static SpriteRenderer Sky { get; set; }
+        public static SpriteRenderer Wall { get; set; }
+        public static SpriteRenderer Wall_Partition { get; set; }
 
         //restaurant
-        static SpriteRenderer board;
-        static SpriteRenderer table1;
-        static SpriteRenderer table2;
-        static SpriteRenderer table3;
-        static SpriteRenderer table4;
-        static SpriteRenderer table5;
-        static SpriteRenderer table6;
-        static SpriteRenderer selfcorner;
-        static SpriteRenderer gate;
-        static SpriteRenderer drinking;
-        static SpriteRenderer counter;
+        public static SpriteRenderer Board { get; set; }
+        public static SpriteRenderer Table1 { get; set; }
+        public static SpriteRenderer Table2 { get; set; }
+        public static SpriteRenderer Table3 { get; set; }
+        public static SpriteRenderer Table4 { get; set; }
+        public static SpriteRenderer Table5 { get; set; }
+        public static SpriteRenderer Table6 { get; set; }
+        public static SpriteRenderer Selfcorner { get; set; }
+        public static SpriteRenderer Gate { get; set; }
+        public static SpriteRenderer Drinking { get; set; }
+        public static SpriteRenderer Counter { get; set; }
 
         //kitchen
-        static SpriteRenderer carpet;
-        static SpriteRenderer window;
-        static SpriteRenderer sink;
-        static SpriteRenderer shelf;
-        static SpriteRenderer refrigerator;
-        static SpriteRenderer plants;
-        static SpriteRenderer oven_01;
-        static SpriteRenderer oven_02;
-        static SpriteRenderer oven_03;
-        static SpriteRenderer oven_04;
-        static SpriteRenderer oven_05;
-        static SpriteRenderer oven_06;
+        public static SpriteRenderer Carpet { get; set; }
+        public static SpriteRenderer Window { get; set; }
+        public static SpriteRenderer Sink { get; set; }
+        public static SpriteRenderer Shelf { get; set; }
+        public static SpriteRenderer Refrigerator { get; set; }
+        public static SpriteRenderer Plants { get; set; }
+        public static SpriteRenderer Oven_01 { get; set; }
+        public static SpriteRenderer Oven_02 { get; set; }
+        public static SpriteRenderer Oven_03 { get; set; }
+        public static SpriteRenderer Oven_04 { get; set; }
+        public static SpriteRenderer Oven_05 { get; set; }
+        public static SpriteRenderer Oven_06 { get; set; }
 
         //terrace
-        static SpriteRenderer cushion_01;
-        static SpriteRenderer cushion_02;
-        static SpriteRenderer cushion_03;
-        static SpriteRenderer cushion_04;
+        public static SpriteRenderer Cushion_01 { get; set; }
+        public static SpriteRenderer Cushion_02 { get; set; }
+        public static SpriteRenderer Cushion_03 { get; set; }
+        public static SpriteRenderer Cushion_04 { get; set; }
 
         public static void FurnitureInit()
         {
             FurnitureObjectSetting();
-            FurnitureDataSetting(new TempFurnitureInfo());
+            FurnitureDataSetting(DataManager.ServerData.furnitureData);
         }
 
         private static void FurnitureObjectSetting()
         {
             Transform BG = GameObject.Find("BG").GetComponent<Transform>();
 
-            floor = BG.Find("floor").GetComponent<SpriteRenderer>();
-            sky = BG.Find("sky").GetComponent<SpriteRenderer>();
-            wall = BG.Find("wall").GetComponent<SpriteRenderer>();
-            wall_Partition = BG.Find("wall_b").GetComponent<SpriteRenderer>();
+            Floor = BG.Find("floor").GetComponent<SpriteRenderer>();
+            Sky = BG.Find("sky").GetComponent<SpriteRenderer>();
+            Wall = BG.Find("wall").GetComponent<SpriteRenderer>();
+            Wall_Partition = BG.Find("wall_b").GetComponent<SpriteRenderer>();
 
             Transform restaurnat = BG.Find("BG_Restaurant");
 
-            board = restaurnat.Find("board").GetComponent<SpriteRenderer>();
-            table1 = restaurnat.Find("table_01").GetComponent<SpriteRenderer>();
-            table2 = restaurnat.Find("table_02").GetComponent<SpriteRenderer>();
-            table3 = restaurnat.Find("table_03").GetComponent<SpriteRenderer>();
-            table4 = restaurnat.Find("table_04").GetComponent<SpriteRenderer>();
-            table5 = restaurnat.Find("table_05").GetComponent<SpriteRenderer>();
-            table6 = restaurnat.Find("table_06").GetComponent<SpriteRenderer>();
-            selfcorner = restaurnat.Find("selfcorner").GetComponent<SpriteRenderer>();
-            gate = restaurnat.Find("gate").GetComponent<SpriteRenderer>();
-            drinking = restaurnat.Find("drinking").GetComponent<SpriteRenderer>();
-            counter = restaurnat.Find("counter").GetComponent<SpriteRenderer>();
+            Board = restaurnat.Find("board").GetComponent<SpriteRenderer>();
+            Table1 = restaurnat.Find("table_01").GetComponent<SpriteRenderer>();
+            Table2 = restaurnat.Find("table_02").GetComponent<SpriteRenderer>();
+            Table3 = restaurnat.Find("table_03").GetComponent<SpriteRenderer>();
+            Table4 = restaurnat.Find("table_04").GetComponent<SpriteRenderer>();
+            Table5 = restaurnat.Find("table_05").GetComponent<SpriteRenderer>();
+            Table6 = restaurnat.Find("table_06").GetComponent<SpriteRenderer>();
+            Selfcorner = restaurnat.Find("selfcorner").GetComponent<SpriteRenderer>();
+            Gate = restaurnat.Find("gate").GetComponent<SpriteRenderer>();
+            Drinking = restaurnat.Find("drinking").GetComponent<SpriteRenderer>();
+            Counter = restaurnat.Find("counter").GetComponent<SpriteRenderer>();
 
             Transform kitchen = BG.Find("BG_Kitchen");
 
-            carpet = kitchen.Find("carpet").GetComponent<SpriteRenderer>();
-            window = kitchen.Find("window").GetComponent<SpriteRenderer>();
-            sink = kitchen.Find("sink").GetComponent<SpriteRenderer>();
-            shelf = kitchen.Find("shelf").GetComponent<SpriteRenderer>();
-            refrigerator = kitchen.Find("refrigerator").GetComponent<SpriteRenderer>();
-            plants = kitchen.Find("plants").GetComponent<SpriteRenderer>();
-            oven_01 = kitchen.Find("oven_01").GetComponent<SpriteRenderer>();
-            oven_02 = kitchen.Find("oven_02").GetComponent<SpriteRenderer>();
-            oven_03 = kitchen.Find("oven_03").GetComponent<SpriteRenderer>();
-            oven_04 = kitchen.Find("oven_04").GetComponent<SpriteRenderer>();
-            oven_05 = kitchen.Find("oven_05").GetComponent<SpriteRenderer>();
-            oven_06 = kitchen.Find("oven_06").GetComponent<SpriteRenderer>();
+            Carpet = kitchen.Find("carpet").GetComponent<SpriteRenderer>();
+            Window = kitchen.Find("window").GetComponent<SpriteRenderer>();
+            Sink = kitchen.Find("sink").GetComponent<SpriteRenderer>();
+            Shelf = kitchen.Find("shelf").GetComponent<SpriteRenderer>();
+            Refrigerator = kitchen.Find("refrigerator").GetComponent<SpriteRenderer>();
+            Plants = kitchen.Find("plants").GetComponent<SpriteRenderer>();
+            Oven_01 = kitchen.Find("oven_01").GetComponent<SpriteRenderer>();
+            Oven_02 = kitchen.Find("oven_02").GetComponent<SpriteRenderer>();
+            Oven_03 = kitchen.Find("oven_03").GetComponent<SpriteRenderer>();
+            Oven_04 = kitchen.Find("oven_04").GetComponent<SpriteRenderer>();
+            Oven_05 = kitchen.Find("oven_05").GetComponent<SpriteRenderer>();
+            Oven_06 = kitchen.Find("oven_06").GetComponent<SpriteRenderer>();
 
             Transform terrace = BG.Find("BG_Terrace");
 
-            cushion_01 = terrace.Find("cushion_01").GetComponent<SpriteRenderer>();
-            cushion_02 = terrace.Find("cushion_02").GetComponent<SpriteRenderer>();
-            cushion_03 = terrace.Find("cushion_03").GetComponent<SpriteRenderer>();
-            cushion_04 = terrace.Find("cushion_04").GetComponent<SpriteRenderer>();
+            Cushion_01 = terrace.Find("cushion_01").GetComponent<SpriteRenderer>();
+            Cushion_02 = terrace.Find("cushion_02").GetComponent<SpriteRenderer>();
+            Cushion_03 = terrace.Find("cushion_03").GetComponent<SpriteRenderer>();
+            Cushion_04 = terrace.Find("cushion_04").GetComponent<SpriteRenderer>();
 
         }
 
-        private static async void FurnitureDataSetting(TempFurnitureInfo info)
+        private static async void FurnitureDataSetting(FurnitureData info)
         {
-            floor.sprite = await LoadAddressableManager.LoadImage_Furniture(info.floor);
-            sky.sprite = await LoadAddressableManager.LoadImage_Furniture(info.sky);
-            wall.sprite = await LoadAddressableManager.LoadImage_Furniture(info.wall);
-            board.sprite = await LoadAddressableManager.LoadImage_Furniture(info.board);
-            table1.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table1);
-            table2.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table2);
-            table3.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table3);
-            table4.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table4);
-            table5.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table5);
-            table6.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table6);
-            selfcorner.sprite = await LoadAddressableManager.LoadImage_Furniture(info.selfcorner);
-            gate.sprite = await LoadAddressableManager.LoadImage_Furniture(info.gate);
-            drinking.sprite = await LoadAddressableManager.LoadImage_Furniture(info.drinking);
-            counter.sprite = await LoadAddressableManager.LoadImage_Furniture(info.counter);
-            carpet.sprite = await LoadAddressableManager.LoadImage_Furniture(info.carpet);
-            window.sprite = await LoadAddressableManager.LoadImage_Furniture(info.window);
-            sink.sprite = await LoadAddressableManager.LoadImage_Furniture(info.sink);
-            shelf.sprite = await LoadAddressableManager.LoadImage_Furniture(info.shelf);
-            refrigerator.sprite = await LoadAddressableManager.LoadImage_Furniture(info.refrigerator);
-            plants.sprite = await LoadAddressableManager.LoadImage_Furniture(info.plants);
-            oven_01.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_01);
-            oven_02.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_02);
-            oven_03.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_03);
-            oven_04.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_04);
-            oven_05.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_05);
-            oven_06.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_06);
-            cushion_01.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_01);
-            cushion_02.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_02);
-            cushion_03.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_03);
-            cushion_04.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_04);
+            Floor.sprite = await LoadAddressableManager.LoadImage_Furniture(info.floor);
+            Sky.sprite = await LoadAddressableManager.LoadImage_Furniture(info.sky);
+            Wall.sprite = await LoadAddressableManager.LoadImage_Furniture(info.wall);
+            Board.sprite = await LoadAddressableManager.LoadImage_Furniture(info.board);
+            Table1.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table1);
+            Table2.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table2);
+            Table3.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table3);
+            Table4.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table4);
+            Table5.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table5);
+            Table6.sprite = await LoadAddressableManager.LoadImage_Furniture(info.table6);
+            Selfcorner.sprite = await LoadAddressableManager.LoadImage_Furniture(info.selfcorner);
+            Gate.sprite = await LoadAddressableManager.LoadImage_Furniture(info.gate);
+            Drinking.sprite = await LoadAddressableManager.LoadImage_Furniture(info.drinking);
+            Counter.sprite = await LoadAddressableManager.LoadImage_Furniture(info.counter);
+            Carpet.sprite = await LoadAddressableManager.LoadImage_Furniture(info.carpet);
+            Window.sprite = await LoadAddressableManager.LoadImage_Furniture(info.window);
+            Sink.sprite = await LoadAddressableManager.LoadImage_Furniture(info.sink);
+            Shelf.sprite = await LoadAddressableManager.LoadImage_Furniture(info.shelf);
+            Refrigerator.sprite = await LoadAddressableManager.LoadImage_Furniture(info.refrigerator);
+            Plants.sprite = await LoadAddressableManager.LoadImage_Furniture(info.plants);
+            Oven_01.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_01);
+            Oven_02.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_02);
+            Oven_03.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_03);
+            Oven_04.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_04);
+            Oven_05.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_05);
+            Oven_06.sprite = await LoadAddressableManager.LoadImage_Furniture(info.oven_06);
+            Cushion_01.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_01);
+            Cushion_02.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_02);
+            Cushion_03.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_03);
+            Cushion_04.sprite = await LoadAddressableManager.LoadImage_Furniture(info.cushion_04);
         }
-    }
 
-    class TempFurnitureInfo
-    {
-        public string floor = "basica_floor_001";
-        public string sky = "basica_sky_001";
-        public string wall = "basica_walla_001";
-        public string wall_b = "basica_wallb_001";
-        public string board = "basica_board_001";
-        public string table1 = "basica_table_001";
-        public string table2 = "basicb_table_002";
-        public string table3 = "clover_table_003";
-        public string table4 = "";
-        public string table5 = "";
-        public string table6 = "";
-        public string selfcorner = "basica_selfcorner_001";
-        public string gate = "basica_gate_001";
-        public string drinking = "basica_drinking_001";
-        public string counter = "basica_counter_001";
-        public string carpet = "basica_carpet_001";
-        public string window = "basica_window_001";
-        public string sink = "basica_sink_001";
-        public string shelf = "basica_shelf_001";
-        public string refrigerator = "basica_refrigerator_001";
-        public string plants = "basica_plants_001";
-        public string oven_01 = "basica_oven_001";
-        public string oven_02 = "basicb_oven_002";
-        public string oven_03 = "clover_oven_003";
-        public string oven_04 = "";
-        public string oven_05 = "";
-        public string oven_06 = "";
-        public string cushion_01 = "basica_cushion_001";
-        public string cushion_02 = "basica_cushion_001";
-        public string cushion_03 = "basicb_cushion_002";
-        public string cushion_04 = "clover_cushion_003";
+        public static Vector3 GetOvenPosition(int index)
+        {
+            switch (index)
+            {
+                case 0: return Oven_01.transform.position;
+                case 1: return Oven_02.transform.position;
+                case 2: return Oven_03.transform.position;
+                case 3: return Oven_04.transform.position;
+                case 4: return Oven_05.transform.position;
+                case 5: return Oven_06.transform.position;
+                default: return Vector3.zero;
+
+            }
+        }
+        public static Vector3 GetTablePosition(int index)
+        {
+            switch (index)
+            {
+                case 0: return Table1.transform.position;
+                case 1: return Table2.transform.position;
+                case 2: return Table3.transform.position;
+                case 3: return Table4.transform.position;
+                case 4: return Table5.transform.position;
+                case 5: return Table6.transform.position;
+                default: return Vector3.zero;
+
+            }
+        }
     }
 }
 

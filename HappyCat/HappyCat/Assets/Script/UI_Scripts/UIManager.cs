@@ -19,7 +19,8 @@ namespace HC.Utils
     }
     class UIManager
     {
-        private static GameObject root;
+        public static GameObject UIRoot { get; set; }
+        public static GameObject WorldRoot { get; set; }
 
         private static Dictionary<string, GameObject> activeUIs = new();
         private static Queue<WorkQueueData> workQueue = new Queue<WorkQueueData>();
@@ -30,7 +31,8 @@ namespace HC.Utils
 
         public static void Init()
         {
-            root = GameObject.Find("SafeArea");
+            UIRoot = GameObject.Find("Canvas/SafeArea/ETC");
+            WorldRoot = GameObject.Find("WorldCanvas");
         }
 
         public static async UniTaskVoid RegisterUI(string uiAddress, GameObject ui)
@@ -69,7 +71,7 @@ namespace HC.Utils
 
             //if (ob != null)
             //{
-            //    GameObject uiInstance = GameObject.Instantiate(ob, parent == null ? root.transform : parent.transform);
+            //    GameObject uiInstance = GameObject.Instantiate(ob, parent == null ? UIRoot.transform : parent.transform);
             //    activeUIs[uiAddress] = uiInstance;
             //    uiInstance.GetComponent<UIBase>()?.OnOpen();
             //}
@@ -107,7 +109,7 @@ namespace HC.Utils
                     var ob = await LoadAddressableManager.LoadPopup<GameObject>(nextPopup.uiAddress);
                     if (ob != null)
                     {
-                        var parent = nextPopup.parent == null ? root.transform : nextPopup.parent.transform;
+                        var parent = nextPopup.parent == null ? UIRoot.transform : nextPopup.parent.transform;
 
                         GameObject uiObject = new GameObject(ob.name, typeof(RectTransform));
                         uiObject.SetActive(false);
@@ -168,7 +170,7 @@ namespace HC.Utils
         private static async UniTask OpenLoadingPopup()
         {
             var loading = await LoadAddressableManager.LoadPopup<GameObject>(loadingName);
-            loadingPopup = GameObject.Instantiate(loading, root.transform);
+            loadingPopup = GameObject.Instantiate(loading, UIRoot.transform);
             await loadingPopup.GetComponent<UIBase>().OnOpen();
         }
         private static void CloseLoadingPopup()

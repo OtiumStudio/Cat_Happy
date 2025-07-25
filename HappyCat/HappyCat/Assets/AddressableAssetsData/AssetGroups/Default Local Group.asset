@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: f50fdc6510cb6fc4fa00a1f7e2588bee
   m_SerializeEntries:
+  - m_GUID: 1b4b8dd2ea97b8d4bade81d68d096d5b
+    m_Address: Assets/HC_Resources/Prefabs/Food/Food.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 29cdead7068d8c04aaea6963486879fd
     m_Address: Assets/HC_Resources/Art/Cat/Animator/AC_cat003.controller
     m_ReadOnly: 0
@@ -22,6 +27,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2b02feca441ea7c428f79e8aa4b98ce4
     m_Address: Assets/HC_Resources/Art/Cat/Animator/AC_cat001.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b40e7a81d8b02843b4ca4a2f3ad42ca
+    m_Address: Assets/HC_Resources/Art/Atlas/Food.spriteatlasv2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

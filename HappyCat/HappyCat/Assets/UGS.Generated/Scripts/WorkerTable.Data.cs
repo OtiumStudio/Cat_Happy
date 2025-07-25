@@ -65,6 +65,8 @@ namespace WorkerTable
 		public System.Int32 type;
 		public Place place;
 		public System.Int32 spot;
+		public System.Collections.Generic.List<Int32> ani_idle;
+		public System.Collections.Generic.List<Int32> ani_work;
   
 
 #region fuctions

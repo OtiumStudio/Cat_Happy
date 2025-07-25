@@ -61,8 +61,9 @@ namespace BackgroundTable
 		public System.Int32 name_id;
 		public System.Int32 desc_id;
 		public System.String icon;
+		public System.Int32 theme;
 		public BackgroundType type;
-		public System.Int32 normal;
+		public System.Int32 no;
   
 
 #region fuctions

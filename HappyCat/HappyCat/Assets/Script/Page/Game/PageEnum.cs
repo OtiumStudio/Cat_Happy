@@ -1,13 +1,13 @@
 using UnityEngine;
 namespace HC.Game
 {
-    enum E_PAGESTATE
+    public enum E_PAGESTATE
     {
         TERRACE = -1,
         RESTAURANT = 0,
         KITCHEN = 1,
     }
-    enum E_PAGEDIRECTION
+    public enum E_PAGEDIRECTION
     {
         NONE = 0,
         UP = 10,
@@ -15,12 +15,22 @@ namespace HC.Game
         LEFT = -1,
         RIGHT = 1
     }
-    enum E_ANIMATION
+    public enum E_ANIMATION
     {
         IDLE = 0,
         WALK,
         EAT,
         SAD,
         SIT
+    }
+    public enum E_FOOD
+    {
+        RESTAURANT,
+        KITCHEN
+    }
+    public enum E_DESTINATION
+    {
+        NONE,
+        TABLE
     }
 }

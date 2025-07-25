@@ -19,6 +19,7 @@ public class GamePage : MonoBehaviour
         UIManager.Init();
         CatManager.CatInit();
         FurnitureManager.FurnitureInit();
+        KitchenManager.KitchenInit();
 
         UIManager.RegisterUI("TopLayout", topLayer).Forget();
     }
@@ -32,11 +33,14 @@ public class GamePage : MonoBehaviour
     }
     private void OnDestroy()
     {
+        CatManager.Close();
+        KitchenManager.Close();
     }
 
     private void Update()
     {
         CatManager.CatUpdate();
+        KitchenManager.KitchenUpdate();
     }
 
     #region event
