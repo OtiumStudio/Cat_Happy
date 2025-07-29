@@ -8,11 +8,11 @@
 #define USER_DB_H
 
 #pragma once
-#include <mysql.h>
+#include <pqxx/pqxx>
 #include <string>
 
-bool add_user(MYSQL* conn, const std::string& username, const std::string& password);
-bool verify_user(const std::string& username, const std::string& password);
+bool add_user(pqxx::connection& conn, const std::string& username, const std::string& password);
+bool verify_user(pqxx::connection& conn, const std::string& username, const std::string& password);
 
 #endif //USER_DB_H
 

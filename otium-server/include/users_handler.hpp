@@ -7,8 +7,9 @@
 
 #pragma once
 #include <crow.h>
+#include <pqxx/pqxx>
 
-void user_routes(crow::SimpleApp& app);
+void user_routes(crow::SimpleApp& app, pqxx::connection& conn);
 
 
 #endif //USERS_HANDLER_H

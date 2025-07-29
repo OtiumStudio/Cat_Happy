@@ -7,7 +7,8 @@
 
 #pragma once
 #include "crow.h"
+#include <pqxx/pqxx>
 
-void login_routes(crow::SimpleApp& app);
+void login_routes(crow::SimpleApp& app, pqxx::connection& conn);
 
 #endif //LOGIN_H

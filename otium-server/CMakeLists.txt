@@ -29,6 +29,10 @@ add_executable(server
         include/user_db.h
         src/users_handler.cpp
         include/users_handler.hpp
-        src/db_test.cpp)
+        third_party/base64/base64_util.cpp)
 
-target_link_libraries(server mysqlclient pthread ssl crypto)
+target_link_libraries(server pqxx)
+
+target_include_directories(server
+        PRIVATE ${PROJECT_SOURCE_DIR}/include
+            ${PROJECT_SOURCE_DIR}/third_party/base64)

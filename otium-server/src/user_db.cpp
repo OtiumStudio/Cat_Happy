@@ -7,38 +7,38 @@
 #include "../include/user_db.h"
 
 #include <iostream>
-#include <unordered_map>
-#include <mutex>
-#include <mysql.h>
-#include <ostream>
+#include <pqxx/pqxx>
 
-
-//임시로 서버에 데이터 저장해주는 코드
-std::unordered_map<std::string, std::string> user_db;
-std::mutex user_db_mutex;
-
-bool add_user(MYSQL* conn, const std::string& username, const std::string& password) {
-    char escaped_username[256];
-    char escaped_password[256];
-
-    mysql_real_escape_string(conn, escaped_username, username.c_str(), username.length());
-    mysql_real_escape_string(conn, escaped_password, password.c_str(), password.length());
-
-    std::string query = "INSERT INTO users (username, password) VALUES ('" + std::string(escaped_username) + "', '" + std::string(escaped_password) + "')";
-
-    if (mysql_query(conn, query.c_str())) {
-        if (std::string(mysql_error(conn)).find("Duplicate") != std::string::npos) {
-            return false;
-        }
-        std::cerr << "Error inserting user " << mysql_error(conn) << std::endl;
+// PostgreSQL 기반 사용자 추가
+bool add_user(pqxx::connection& conn, const std::string& username, const std::string& password) {
+    try {
+        pqxx::work txn(conn);
+        txn.exec_params(
+            "INSERT INTO users (username, password) VALUES ($1, $2)",
+            username, password
+        );
+        txn.commit();
+        return true;
+    } catch (const pqxx::unique_violation& e) {
+        return false;
+    } catch (const std::exception& e) {
+        std::cerr << "Error inserting user: " << e.what() << std::endl;
         return false;
     }
-    return true;
 }
 
-bool verify_user(const std::string& username, const std::string& password) {
-    std::lock_guard<std::mutex> lock(user_db_mutex);
-    auto it = user_db.find(username);
-    if (it == user_db.end()) return false;
-    return it->second == password;
+// PostgreSQL 기반 사용자 검증
+bool verify_user(pqxx::connection& conn, const std::string& username, const std::string& password) {
+    try {
+        pqxx::work txn(conn);
+        pqxx::result r = txn.exec_params(
+            "SELECT password FROM users WHERE username = $1",
+            username
+        );
+        if (r.empty()) return false;
+        return r[0][0].as<std::string>() == password;
+    } catch (const std::exception& e) {
+        std::cerr << "Error verifying user: " << e.what() << std::endl;
+        return false;
+    }
 }

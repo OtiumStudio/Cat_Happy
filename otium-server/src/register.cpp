@@ -6,14 +6,14 @@
 
 #include "../include/register.h"
 
-#include <mysql.h>
+#include <pqxx/pqxx>
 
 #include "../include/user_db.h"
 #include "crow/app.h"
 
-void register_routes(crow::SimpleApp& app, MYSQL* conn) {
+void register_routes(crow::SimpleApp& app, pqxx::connection& conn) {
     CROW_ROUTE(app, "/register").methods("POST"_method)
-    ([conn](const crow::request& req) {
+    ([&conn](const crow::request& req) {
         std::cout << "[DEBUG] /register 요청 받음, body: " << req.body << std::endl;
 
         auto body = crow::json::load(req.body);
@@ -30,11 +30,6 @@ void register_routes(crow::SimpleApp& app, MYSQL* conn) {
         std::string password = body["password"].s();
 
         std::cout << "[DEBUG] username: " << username << ", password: " << password << std::endl;
-
-        if (conn == nullptr) {
-          std::cout << "[DEBUG] conn is nullptr" << std::endl;
-          return crow::response(500, "Database connection error");
-      }
 
         if (username.empty() || password.empty())
             return crow::response(400, "Empty username or password");

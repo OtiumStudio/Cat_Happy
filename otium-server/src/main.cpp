@@ -1,54 +1,43 @@
 #include "crow.h"
 #include <fstream>
-#include <mysql/mysql.h>
+#include <iostream>
 #include <sstream>
+#include <string>
 #include "../include/register.h"
 #include "../include/login_handler.h"
 #include "../include/users_handler.hpp"
+#include "base64_util.h"
 #include "../include/user_db.h"
+#include <pqxx/pqxx>
 
 int main() {
-    MYSQL* conn = mysql_init(nullptr);
-    if (!conn) {
-        std::cerr << "MySQL initialization failed" << std::endl;
-        return 1;
-    }
+    std::string jwt_header = R"({\"alg\":\"HS256\",\"typ\":\"JWT\"})";
+    std::string encoded_header = base64_encode_url(jwt_header);
 
+    std::cout << "[JWT 헤더 Base64 URL] " << encoded_header << std::endl;
+
+    // PostgreSQL 접속 정보 환경변수에서 읽기
     const char* host = getenv("DB_HOST");
     const char* user = getenv("DB_USER");
     const char* password = getenv("DB_PASS");
     const char* dbname = getenv("DB_NAME");
-
-    if (!user) {
-        std::cerr << "[ERROR] DB_USER 환경변수 설정 안 됨!" << std::endl;
-    } else {
-        std::cout << "[DEBUG] DB_USER: " << user << std::endl;
-    }
-
-    if (!password) {
-        std::cerr << "[ERROR] DB_PASS 환경변수 설정 안 됨!" << std::endl;
-    } else {
-        std::cout << "[DEBUG] DB_USER: " << password << std::endl;
-    }
-
-    if (!dbname) {
-        std::cerr << "[ERROR] DB_NAME 환경변수 설정 안 됨!" << std::endl;
-    } else {
-        std::cout << "[DEBUG] DB_NAME: " << dbname << std::endl;
-    }
-
-    if (!mysql_real_connect(conn, host, user, password, dbname, 3306, nullptr, 0)) {
-        std::cerr << "MySQL connection failed: " << mysql_error(conn) << std::endl;
+    std::stringstream conn_str;
+    conn_str << "host=" << (host ? host : "localhost")
+             << " user=" << (user ? user : "postgres")
+             << " password=" << (password ? password : "")
+             << " dbname=" << (dbname ? dbname : "postgres");
+    pqxx::connection conn(conn_str.str());
+    if (!conn.is_open()) {
+        std::cerr << "PostgreSQL connection failed" << std::endl;
         return 1;
     }
-
-    std::cout << "MySQL connected successfully!" << std::endl;
+    std::cout << "PostgreSQL connected successfully!" << std::endl;
 
     crow::SimpleApp app;
 
     register_routes(app, conn);
-    login_routes(app);
-    user_routes(app);
+    login_routes(app, conn);
+    user_routes(app, conn);
 
     // 기본 라우트 - GET
     CROW_ROUTE(app, "/")([](){
@@ -96,7 +85,5 @@ int main() {
 
 
     app.port(18080).multithreaded().run();
-    mysql_close(conn);
     return 0;
-
 }

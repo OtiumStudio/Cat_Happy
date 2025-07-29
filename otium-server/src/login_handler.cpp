@@ -5,9 +5,9 @@
 #include "../include/login_handler.h"
 #include "../include/user_db.h"
 
-void login_routes(crow::SimpleApp& app) {
+void login_routes(crow::SimpleApp& app, pqxx::connection& conn) {
     CROW_ROUTE(app, "/login").methods("POST"_method)
-    ([&](const crow::request& req) {
+    ([&conn](const crow::request& req) {
         auto body = crow::json::load(req.body);
         if (!body || !body.has("username") || !body.has("password"))
             return crow::response(400, "Missing username or password");
@@ -15,7 +15,7 @@ void login_routes(crow::SimpleApp& app) {
         std::string username = body["username"].s();
         std::string password = body["password"].s();
 
-        if (!verify_user(username, password))
+        if (!verify_user(conn, username, password))
             return crow::response(401, "Invalid credentials");
 
         crow::json::wvalue result;

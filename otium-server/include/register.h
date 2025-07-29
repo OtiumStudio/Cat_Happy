@@ -6,10 +6,10 @@
 #define REGISTER_H
 
 #pragma once
-#include <mysql.h>
+#include <pqxx/pqxx>
 
 #include "crow.h"
 
-void register_routes(crow::SimpleApp& app, MYSQL* conn);
+void register_routes(crow::SimpleApp& app, pqxx::connection& conn);
 
 #endif //REGISTER_H
