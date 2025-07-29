@@ -16,7 +16,7 @@ int main() {
 
     std::cout << "[JWT 헤더 Base64 URL] " << encoded_header << std::endl;
 
-    // PostgreSQL 접속 정보 환경변수에서 읽기
+    // PostgreSQL 접속 정보 환경변수에서 읽어오기
     const char* host = getenv("DB_HOST");
     const char* user = getenv("DB_USER");
     const char* password = getenv("DB_PASS");
