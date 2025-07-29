@@ -59,7 +59,23 @@ int main() {
         if (!in) return crow::response(404);
         std::ostringstream contents;
         contents << in.rdbuf();
-        return crow::response(contents.str());
+        
+        crow::response res(contents.str());
+        
+        // 파일 확장자에 따른 Content-Type 설정
+        if (file.find(".css") != std::string::npos) {
+            res.add_header("Content-Type", "text/css");
+        } else if (file.find(".js") != std::string::npos) {
+            res.add_header("Content-Type", "application/javascript");
+        } else if (file.find(".png") != std::string::npos) {
+            res.add_header("Content-Type", "image/png");
+        } else if (file.find(".html") != std::string::npos) {
+            res.add_header("Content-Type", "text/html");
+        } else if (file.find(".map") != std::string::npos) {
+            res.add_header("Content-Type", "application/json");
+        }
+        
+        return res;
     });
 
     // Swagger UI 접속용 redirect
@@ -80,7 +96,10 @@ int main() {
         if (!in) return crow::response(404);
         std::ostringstream contents;
         contents << in.rdbuf();
-        return crow::response(contents.str());
+        
+        crow::response res(contents.str());
+        res.add_header("Content-Type", "application/x-yaml");
+        return res;
     });
 
 
