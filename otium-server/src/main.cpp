@@ -86,7 +86,7 @@ int main() {
         return res;
     });
 
-    // openapi.yaml 제공함
+    // openapi.yaml 제공
     CROW_ROUTE(app, "/openapi.yaml")([] {
         std::ifstream in("openapi.yaml");
         if (!in) {
