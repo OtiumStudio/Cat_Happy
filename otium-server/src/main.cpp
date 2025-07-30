@@ -78,7 +78,7 @@ int main() {
         return res;
     });
 
-    // Swagger UI 접속용 redirect
+    // Swagger UI 접속용 redirect test
     CROW_ROUTE(app, "/docs")([] {
         crow::response res;
         res.code = 301; // 301 Moved Permanently
