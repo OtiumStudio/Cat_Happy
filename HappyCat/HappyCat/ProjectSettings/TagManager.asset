@@ -53,11 +53,11 @@ TagManager:
   - name: wall
     uniqueID: 702026725
     locked: 0
-  - name: cat
-    uniqueID: 3056941505
-    locked: 0
-  - name: furniture
+  - name: cat_interaction
     uniqueID: 1344884573
+    locked: 0
+  - name: UI
+    uniqueID: 3056941505
     locked: 0
   - name: tilemap
     uniqueID: 2467651203

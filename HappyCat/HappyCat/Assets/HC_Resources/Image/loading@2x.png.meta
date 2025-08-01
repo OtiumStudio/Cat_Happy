@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HappyCat/HappyCat/Assets/HC_Resources/Image/loading@2x.png.meta
 guid: 5cc1bcadae96786408e50ca28102cbc0
+========
+guid: 0f1973ca1684d424ebba905a95e91828
+>>>>>>>> develop:HappyCat/HappyCat/Assets/HC_Resources/Art/Food/food_bubble01.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

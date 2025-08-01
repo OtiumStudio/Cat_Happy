@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: f50fdc6510cb6fc4fa00a1f7e2588bee
   m_SerializeEntries:
+  - m_GUID: 1b4b8dd2ea97b8d4bade81d68d096d5b
+    m_Address: Assets/HC_Resources/Prefabs/Food/Food.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 29cdead7068d8c04aaea6963486879fd
     m_Address: Assets/HC_Resources/Art/Cat/Animator/AC_cat003.controller
     m_ReadOnly: 0
@@ -25,8 +30,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b40e7a81d8b02843b4ca4a2f3ad42ca
+    m_Address: Assets/HC_Resources/Art/Atlas/Food.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c38e994c1d46904d94f7524d0aac425
     m_Address: Assets/HC_Resources/Prefabs/Cat/Cat.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f06f7de39cbcd2428a1e07d970949a3
+    m_Address: Assets/HC_Resources/Prefabs/Popup/ProfilePopup.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -35,13 +50,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54c6f2eecd2cb3640a640ab5aae33db2
+    m_Address: Assets/HC_Resources/Prefabs/UI/TopLayout.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5bcb03b254eb1944f8312c700b27e92d
     m_Address: Assets/HC_Resources/Art/Atlas/Loading.spriteatlasv2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6407581a5b7cf6b48a53f17fbb2462c6
+    m_Address: Assets/HC_Resources/Prefabs/UI/MomoButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76ac61b92d62e7447ab553ffa4fdb857
+    m_Address: Assets/HC_Resources/Prefabs/UI/ProfileItem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 76e7beab633ad4a469b507df5c521845
     m_Address: Assets/HC_Resources/Art/Atlas/Cat.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 808719068f201df4c9dd73f85bc38d48
+    m_Address: Assets/HC_Resources/Prefabs/UI/PromoteButton.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

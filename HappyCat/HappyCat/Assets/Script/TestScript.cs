@@ -26,10 +26,10 @@ public class TestScript : MonoBehaviour
         //    Debug.Log(a.code);
         //    Debug.Log(a.icon);
         //    Debug.Log(a.category);
-        //    Debug.Log(a.food.Count);
-        //    Debug.Log(a.food[0]);
-        //    Debug.Log(a.food[1]);
-        //    Debug.Log(a.food[2]);
+        //    Debug.Log(a.foodDatas.Count);
+        //    Debug.Log(a.foodDatas[0]);
+        //    Debug.Log(a.foodDatas[1]);
+        //    Debug.Log(a.foodDatas[2]);
         //    Debug.Log(a.ani_eat01.Count);
         //    Debug.Log("----------------");
         //}

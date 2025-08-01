@@ -7,7 +7,7 @@ using System.Net;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-
+using UnityEngine.UI;
 
 namespace HC.Utils
 {
@@ -19,7 +19,8 @@ namespace HC.Utils
     }
     class UIManager
     {
-        private static Canvas root;
+        public static GameObject UIRoot { get; set; }
+        public static GameObject WorldRoot { get; set; }
 
         private static Dictionary<string, GameObject> activeUIs = new();
         private static Queue<WorkQueueData> workQueue = new Queue<WorkQueueData>();
@@ -30,7 +31,8 @@ namespace HC.Utils
 
         public static void Init()
         {
-            root = GameObject.Find("Canvas").GetComponent<Canvas>();
+            UIRoot = GameObject.Find("Canvas/SafeArea/ETC");
+            WorldRoot = GameObject.Find("WorldCanvas");
         }
 
         public static async UniTaskVoid RegisterUI(string uiAddress, GameObject ui)
@@ -69,7 +71,7 @@ namespace HC.Utils
 
             //if (ob != null)
             //{
-            //    GameObject uiInstance = GameObject.Instantiate(ob, parent == null ? root.transform : parent.transform);
+            //    GameObject uiInstance = GameObject.Instantiate(ob, parent == null ? UIRoot.transform : parent.transform);
             //    activeUIs[uiAddress] = uiInstance;
             //    uiInstance.GetComponent<UIBase>()?.OnOpen();
             //}
@@ -107,9 +109,22 @@ namespace HC.Utils
                     var ob = await LoadAddressableManager.LoadPopup<GameObject>(nextPopup.uiAddress);
                     if (ob != null)
                     {
-                        GameObject uiInstance = GameObject.Instantiate(ob, nextPopup.parent == null ? root.transform : nextPopup.parent.transform);
-                        activeUIs[nextPopup.uiAddress] = uiInstance;
-                        uiInstance.GetComponent<UIBase>()?.OnOpen();
+                        var parent = nextPopup.parent == null ? UIRoot.transform : nextPopup.parent.transform;
+
+                        GameObject uiObject = new GameObject(ob.name, typeof(RectTransform));
+                        uiObject.SetActive(false);
+                        uiObject.transform.SetParent(parent);
+                        uiObject.GetComponent<RectTransform>().anchorMin = Vector2.zero;
+                        uiObject.GetComponent<RectTransform>().anchorMax = Vector2.one;
+                        uiObject.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+                        uiObject.GetComponent<RectTransform>().offsetMax = Vector2.zero;
+
+                        GameObject uiInstance = GameObject.Instantiate(ob, uiObject.transform);
+                        activeUIs[nextPopup.uiAddress] = uiObject;
+                        loadingPopup.transform.SetAsLastSibling();
+                        uiInstance.GetComponent<UIBase>()?.Setting(uiObject);
+                        await uiInstance.GetComponent<UIBase>().OnOpen();
+                        uiObject.SetActive(true);
                     }
                     else
                     {
@@ -132,16 +147,15 @@ namespace HC.Utils
             TryNextPopup();
         }
 
-        public void HideUI(string uiAddress)
+        public static void HideUI(string uiAddress)
         {
             if (activeUIs.TryGetValue(uiAddress, out GameObject ui))
             {
                 ui.SetActive(false);
-                //ui.GetComponent<UIBase>()?.OnClose();
             }
         }
 
-        public void CloseUI(string uiAddress)
+        public static void CloseUI(string uiAddress)
         {
             if (activeUIs.TryGetValue(uiAddress, out GameObject ui))
             {
@@ -156,7 +170,7 @@ namespace HC.Utils
         private static async UniTask OpenLoadingPopup()
         {
             var loading = await LoadAddressableManager.LoadPopup<GameObject>(loadingName);
-            loadingPopup = GameObject.Instantiate(loading, root.transform);
+            loadingPopup = GameObject.Instantiate(loading, UIRoot.transform);
             await loadingPopup.GetComponent<UIBase>().OnOpen();
         }
         private static void CloseLoadingPopup()

@@ -3,7 +3,6 @@
 using GoogleSheet.Core.Type;
 using GoogleSheet.Type;
 using System;
-using System.Diagnostics;
 
 namespace UGS
 {
@@ -37,7 +36,10 @@ namespace UGS
     {
         Wall,
         Floor,
-        Sky
+        Sky,
+        Wall_Side,
+        Star,
+        Moon
     }
     [UGS(typeof(QuestType))]
     public enum QuestType

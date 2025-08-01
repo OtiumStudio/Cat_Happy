@@ -13,11 +13,15 @@ using UnityEngine.UI;
 
 public class GamePage : MonoBehaviour
 {
+    [SerializeField] GameObject topLayer;
     private void Awake()
     {
         UIManager.Init();
         CatManager.CatInit();
         FurnitureManager.FurnitureInit();
+        KitchenManager.KitchenInit();
+
+        UIManager.RegisterUI("TopLayout", topLayer).Forget();
     }
     void Start()
     {
@@ -29,11 +33,14 @@ public class GamePage : MonoBehaviour
     }
     private void OnDestroy()
     {
+        CatManager.Close();
+        KitchenManager.Close();
     }
 
     private void Update()
     {
         CatManager.CatUpdate();
+        KitchenManager.KitchenUpdate();
     }
 
     #region event

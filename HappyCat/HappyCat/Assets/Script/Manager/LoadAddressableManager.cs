@@ -1,3 +1,5 @@
+using HC.Game;
+using HC.Utils;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -17,6 +19,8 @@ namespace HC.Resource
         static string catPrefabPath = "Assets/HC_Resources/Prefabs/Cat/Cat.prefab";
         static string catAnimationPath = "Assets/HC_Resources/Art/Cat/Animator/";
         static string imageFurniturePath = "Assets/HC_Resources/Art/Atlas/BG.spriteatlasv2";
+        static string foodPrefab = "Assets/HC_Resources/Prefabs/Food/Food.prefab";
+        static string imagefoodPath = "Assets/HC_Resources/Art/Atlas/Food.spriteatlasv2";
 
         private static async Task<T> Load<T>(string path)
         {
@@ -75,6 +79,21 @@ namespace HC.Resource
             if (string.IsNullOrEmpty(name)) return null;
             var sa = await Load<SpriteAtlas>(imageFurniturePath);
             return sa.GetSprite(name);
+        }
+        public static async Task<Sprite> LoadImage_Food(string name)
+        {
+            if (string.IsNullOrEmpty(name)) return null;
+            var sa = await Load<SpriteAtlas>(imagefoodPath);
+            return sa.GetSprite(name);
+        }
+
+        public static async Task<T> Create_Food<T>()
+        {
+            var p = await Load<GameObject>(foodPrefab);
+            var food = GameObject.Instantiate(p);
+            food.transform.SetParent(UIManager.WorldRoot.transform);
+            food.SetActive(false);
+            return food.GetComponent<T>();
         }
     }
 }
